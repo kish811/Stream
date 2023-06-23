@@ -1,0 +1,168 @@
+/*
+ * import java.util.List;
+ * import java.util.function.Predicate;
+ * 
+ * public class Main{
+ * 
+ * @SuppressWarnings("unused")
+ * public static void main(String[] args){
+ * List<Integer> numbers =List.of(12,9,13,4,6,2,4,12,15);
+ * 
+ * Predicate<?super Integer> isEvenPredicate=x->x%2==0;
+ * Function<?super Integer,? extends Integer> squareFunction=x->x*x;
+ * 
+ * numbers.stream()
+ * .filter(x->x%2==0)
+ * .filter(isEvenPredicate)
+ * .map(squareFunction)
+ * .forEach(System.out::println);
+ * }
+ * }
+ */
+
+/*
+ * //TO CHECK THE AVERAGE
+ * 
+ * import java.util.Arrays;
+ * import java.util.List;
+ * 
+ * public class Main{
+ * public static void main(String[]args)
+ * {
+ * List<Integer> nums= List.of(1,2,3,6,8,10);
+ * 
+ * double average= nums.stream()
+ * .mapToDouble(Integer::doubleValue)
+ * .average()
+ * .orElse(0.0);
+ * 
+ * System.out.println(average);
+ * 
+ * }
+ * }
+ */
+/*
+ * import java.lang.reflect.Array;
+ * import java.util.Arrays;
+ * import java.util.List;
+ * import java.util.stream.Stream;
+ * 
+ * public class Movie {
+ * 
+ * private String name;
+ * private Integer releaseYear;
+ * private String actor;
+ * 
+ * public Movie(String name, Integer releaseYear, String actor) {
+ * this.name = name;
+ * this.releaseYear = releaseYear;
+ * this.actor = actor;
+ * }
+ * 
+ * public String getName() {
+ * return name;
+ * }
+ * 
+ * public void setName(String name) {
+ * this.name = name;
+ * }
+ * 
+ * public Integer getReleaseYear() {
+ * return releaseYear;
+ * }
+ * 
+ * public void setReleaseYear(Integer releaseYear) {
+ * this.releaseYear = releaseYear;
+ * }
+ * 
+ * public String getActor() {
+ * return actor;
+ * }
+ * 
+ * public void setActor(String actor) {
+ * this.actor = actor;
+ * }
+ * }
+ * 
+ * public class Main {
+ * public static void main(String[] args) {
+ * List<Movie> movieList = Arrays.asList(new Movie("M1", 2021, "A1"),
+ * new Movie("M2", 2020, "A2"));
+ * 
+ * Stream<Movie> moviesStream = movieList.stream();
+ * 
+ * Stream<Movie> filterStream = moviesStream
+ * .filter(m -> m.getReleaseYear() == 2021);
+ * filtersStream.map(m -> m.getName());
+ * 
+ * }
+ * 
+ * }
+ */
+/*
+ * import java.util.List;
+ * 
+ * public class Main {
+ * 
+ * public static void main(String[] args) {
+ * printAllNumbersInListrStructured(List.of(12, 9, 13, 4, 6, 2, 4, 12, 15));
+ * }
+ * 
+ * private static void printAllNumbersInListrStructured(List<Integer> numbers) {
+ * 
+ * for(int number:numbers){
+ * System.out.println(number);
+ * }
+ * }
+ * }
+ */
+
+/*
+ * import java.util.List;
+ * 
+ * public class Main {
+ * 
+ * public static void main(String[] args) {
+ * List<Integer> numbers=(List.of(12, 9, 13, 4, 6, 2, 4, 12, 15));
+ * printEvenNumbersInListrStructured(numbers);
+ * }
+ * 
+ * // private static void print(int number){
+ * // System.out.println(number);
+ * // }
+ * // private static boolean isEven(int number){
+ * // return number%2==0;
+ * // }
+ * 
+ * private static void printAllNumbersInListrStructured(List<Integer> numbers) {
+ * 
+ * numbers.stream()
+ * .forEach(System.out::print);
+ * }
+ * 
+ * private static void printEvenNumbersInListrStructured(List<Integer> numbers)
+ * {
+ * 
+ * numbers.stream()
+ * .filter(number->number%2==0)
+ * .forEach(System.out::println);
+ * }
+ * }
+ */
+/*
+ * import java.util.List;
+ * 
+ * public class Main{
+ * 
+ * public static void main(String[] args) {
+ * List<String> courses =
+ * List.of("spring","springboot","API","MICROSERVICES","AWS",
+ * "PCF","Azure","Docker","kubernetes");
+ * 
+ * courses.stream()
+ * .filter(course->course.contains("s"))
+ * .filter(course->course.length()<=7)
+ * .forEach(System.out::println);
+ * }
+ * }
+ */
